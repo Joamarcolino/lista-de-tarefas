@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0
+            box-sizing: border-box;
+        }
+        h1 {
+            border-radius: 50px;
+            background-color: white;
+            padding: 5px;
+            text-align: center;
+            color: black;
+        }
+        ul {
+            background-color: rgb(255, 255, 255);
+            padding: 15px;
+            border-radius: 30px;
+            color: green;
+        }
+        input{
+            height: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        body{
+            background-color: black;
+            border: 50px;
+            min-height: 100vh;
+
+            display: grid;
+            place-items: center;
+
+        }
+        button{
+            height: 90px;
+            width: 100px;
+            background-color: red;
+            padding: 15px;
+            border-radius: 50px;
+        }
+        
+    </style>
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <h1>Tarefas</h1>
+    <ul>
+        <li>Estudar CSS</li>
+        <li>Estudar JS</li>
+        <li>Estudar HTML</li>
+    </ul>
+    <input>
+    <button onclick="add()">ENTER</button>
+    <script>
+       function add() {
+         const ul = document.querySelector("ul");
+         const input = document.querySelector("input");
+         const tarefa = input.value;
+
+         const li = document.createElement("li")
+         li.innerText = tarefa;
+         ul.appendChild(li);
+
+         input.value = ""
+       } 
+
+    </script>
+    
+</body>
+</html>
